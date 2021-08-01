@@ -12,5 +12,10 @@ public class RabbitmqConfig {
     public Queue queueWork1() {
         return new Queue("queue_work");
     }
+
+    @Bean
+    public Queue queueOrder() {
+        return new Queue("order.ensure");
+    }
 }
 
