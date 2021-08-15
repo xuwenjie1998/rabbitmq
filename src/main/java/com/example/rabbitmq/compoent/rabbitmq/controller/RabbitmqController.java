@@ -1,8 +1,7 @@
-package com.example.rabbitmq.controller;
+package com.example.rabbitmq.compoent.rabbitmq.controller;
 
-import com.example.rabbitmq.model.User;
-import com.example.rabbitmq.service.RabbitmqService;
-import com.rabbitmq.client.MessageProperties;
+import com.example.rabbitmq.compoent.rabbitmq.model.User;
+import com.example.rabbitmq.compoent.rabbitmq.service.RabbitmqService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

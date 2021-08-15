@@ -1,4 +1,4 @@
-package com.example.rabbitmq.service;
+package com.example.rabbitmq.compoent.rabbitmq.service;
 
 import org.springframework.stereotype.Service;
 

@@ -1,0 +1,27 @@
+# 应用名
+spring:
+  application:
+    name: springboot-rabbitmq
+  # rabbitmq配置信息
+  # ip
+  rabbitmq:
+    host: 159.75.75.143
+    port: 5672
+    username: root
+    password: xwj1998.!
+    # 配置虚拟机
+    virtual-host: /
+    listener:
+      simple:
+        # 消息开启手动确认,@RabbitListener变为手动确认
+        acknowledge-mode: manual
+        # 打开消息重试
+        retry:
+          enabled: true
+          #重试间隔时间（单位毫秒）
+          initial-interval: 5000
+          #尝试次数（包含本身消费的1次），尝试5次后就不再尝试了，将消息删除。防止因服务器异常、网络不稳定导致ACK反馈失败，
+          # 使得消息没有正常消费而重新放入队列，消息永远不会删除而导致内存泄露
+          max-attempts: 5
+        #重试次数超过上面的设置之后是否丢弃（false不丢弃时需要写相应代码将该消息加入死信队列）
+        default-requeue-rejected: false

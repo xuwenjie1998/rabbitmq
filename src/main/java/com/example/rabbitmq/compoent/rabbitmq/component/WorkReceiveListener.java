@@ -1,6 +1,6 @@
-package com.example.rabbitmq.component;
+package com.example.rabbitmq.compoent.rabbitmq.component;
 
-import com.example.rabbitmq.model.User;
+import com.example.rabbitmq.compoent.rabbitmq.model.User;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.*;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 // 消费者
 @Component
 public class WorkReceiveListener {
+
     //任务模型 消费者1
     @RabbitListener(queues = "queue_work")
     public void receiveMessage(String msg, Channel channel, Message message) {
